@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="zh">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>MyGitHub</title>
+
+	<link rel="stylesheet" href="static/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="static/css/demo.css">
+	<script src="static/js/modernizr.custom.js"></script>
+	<script src="static/js/jquery.min.js"></script>
+	<script src="static/js/typed.min.js"></script>
+	<script src="static/js/custom.js"></script>
+</head>
+<body>
+	<div class="container">
+		<div class="content">
+			<div class="mockup-browser">
+				<header class="mockup-header mockup-section--dark " style="background-color: #b7edfc;">
+					<div class="mockup-content mockup-grid mockup-grid--spread">
+						<span class="mockup-logo  --text">
+							<img style="width: 25px;float: left;margin-right: 5px;" src="static/img/logo.png" />
+							<div style="margin-top:-8px;float: left;">我的主页</div>
+						</span>
+						<nav class="mockup-nav  --text" style="color: #02a0cd;">
+							<a style="color: #02a0cd;" href="#a"><span class="menu-one">关于博主</span></a>
+							<a style="color: #02a0cd;" href="#b"><span class="menu-one">常用技术</span></a>
+							<a style="color: #02a0cd;" href="#c"><span class="menu-one">博主留言</span></a>
+						</nav>
+					</div>
+				</header>
+				<section class="mockup-section " id="a">
+					<div class="mockup-content mockup-grid">
+						<div class="mockup-grid__item mockup-width--half">
+							<h1 class="mockup-heading mockup-heading--large  --text">
+								欢迎你访问我的GitHub主页 
+								<span class="mockup-heading__subline">欢迎每一位初学者，和我一个打算用HelloWorld解决一切问题的人共同学习。</span>
+							</h1>
+							<button class="mockup-button "><span>QQ:2069563734</span></button>
+						</div>
+						<figure class="mockup-grid__item mockup-width--half">
+							<div class="mockup-img mockup-img--large img1"></div>
+						</figure>
+					</div><!-- /mockup-grid -->
+				</section>
+				<section class="mockup-section mockup-section--dark " id="b">
+					<div class="mockup-content mockup-grid">
+						<h2 class="mockup-heading mockup-heading--single  --text">常用技术</h2>
+						<figure class="mockup-grid__item mockup-width--third">
+							<div class="mockup-img img2"></div>
+							<figcaption class="mockup-caption mockup-caption--box">
+								<h3 class=" --text">菜鸟教程</h3>
+								<p class=" --text">初学者程序百科目录，仅限于目录，东西简单，深究要依靠自己。</p>
+							</figcaption>
+						</figure>
+						<figure class="mockup-grid__item mockup-width--third">
+							<div class="mockup-img img3"></div>
+							<figcaption class="mockup-caption mockup-caption--box ">
+								<h3 class=" --text">Echarts</h3>
+								<p class=" --text">一个专注于图表的统计学页面网站，一定找到你常用的图表。</p>
+							</figcaption>
+						</figure>
+						<figure class="mockup-grid__item mockup-width--third">
+							<div class="mockup-img img4"></div>
+							<figcaption class="mockup-caption mockup-caption--box ">
+								<h3 class=" --text">iconfont</h3>
+								<p class=" --text">阿里巴巴图标库，这里涵盖了基本的图标，你可以用去装点你的网站。</p>
+							</figcaption>
+						</figure>
+					</div><!-- /mockup-grid -->
+				</section>
+				<section class="mockup-section " id="c">
+					<div class="mockup-content">
+						<h2 class="mockup-heading mockup-heading--single  --text">博主留言</h2>
+						<blockquote class="mockup-blockquote" id="typed-strings">
+							
+						</blockquote>
+					</div><!-- /mockup-grid -->
+				</section>
+				
+			</div><!-- /mockup-browser -->
+		</div><!-- /content -->
+	</div><!-- /container -->
+	
+	<script src="static/js/classie.js"></script>
+	<script src="static/js/interact-1.2.4.min.js"></script>
+	<script src="static/js/main.js"></script>
+	<script>
+	    function start(){
+	        let str = ' 欢迎初学者联系博主，只交志同道合的朋友，在IT行业寻找更多的乐趣，坚持，只因为爱好。'
+	        let str_ = ''
+	        let i = 0
+	        let content = document.getElementById('typed-strings')
+	        let timer = setInterval(()=>{
+	            if(str_.length<str.length){
+	                str_ += str[i++]
+	                content.innerHTML = '<p>'+str_+'_</p>'                        //打印时加光标
+	            }else{ 
+	                clearInterval(timer)
+	                content.innerHTML = '<p>'+str_+'</p>'
+	            }
+	        },100)
+	    }
+		setInterval(()=>{
+		     start()
+		},6500)
+	</script>
+</body>
+</html>
