@@ -241,9 +241,9 @@ button:focus {
 }
 
 .mockup-img--large {
-	height: 380px;
+	height: 280px;
 	line-height: 300px;
-	width: 500px;
+	width: 400px;
 }
 
 .mockup-grid__item > p {
